@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ChartController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\SatkerController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,3 +22,4 @@ Route::get('/', function () {
 
 Route::get('chart', [ChartController::class, 'index']);
 Route::get('bar-graph', [StudentController::class, 'index']);
+Route::get('satker', [SatkerController::class, 'index']);

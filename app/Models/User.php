@@ -17,6 +17,16 @@ class User extends Authenticatable
      *
      * @var string[]
      */
+
+    public function sports()
+    {
+        return $this->belongsToMany(
+            Sport::class,
+            'sports_users',
+            'user_id',
+            'sport_id');
+    }
+
     protected $fillable = [
         'name',
         'email',
